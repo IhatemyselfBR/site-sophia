@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 20%, #4c1675 0%, transparent 35%),
+        radial-gradient(circle at 20% 80%, #2a0c43 0%, transparent 35%),
+        #100516;
+    color: #f8f0ff;
+    font-family: "DM Sans", sans-serif;
+    overflow: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .6;
+    background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
+        radial-gradient(circle, #c77dff 1px, transparent 1px);
+    background-size: 90px 90px, 130px 130px;
+    background-position: 10px 20px, 40px 70px;
+    animation: estrelas 12s linear infinite;
+}
+
+@keyframes estrelas {
+    from { transform: translateY(0); }
+    to { transform: translateY(-90px); }
+}
+
+.tela {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.97);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.tela.ativa {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.card,
+.carta {
+    width: min(92%, 650px);
+    padding: 45px 30px;
+    text-align: center;
+    border-radius: 28px;
+    background: rgba(30, 8, 44, .82);
+    border: 1px solid rgba(199, 125, 255, .25);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 70px rgba(123, 44, 191, .22);
+}
+
+.card {
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.coracao {
+    font-size: 55px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px #9d4edd);
+    animation: pulsar 1.8s infinite;
+}
+
+@keyframes pulsar {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.pequeno,
+.etapa {
+    color: #c77dff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.card h1,
+.final-card h1 {
+    font-size: clamp(40px, 10vw, 72px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+h1 span,
+h2 span {
+    color: #c77dff;
+}
+
+.subtitulo {
+    color: #d8c9df;
+    margin: 20px auto 30px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 100px;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+    box-shadow: 0 8px 25px rgba(123,44,191,.35);
+    transition: .25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+.conteudo {
+    width: min(100%, 850px);
+    text-align: center;
+}
+
+.conteudo h2 {
+    font-size: clamp(35px, 8vw, 60px);
+    margin: 15px 0 40px;
+    line-height: 1.1;
+}
+
+.momentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.momento {
+    padding: 25px 18px;
+    border-radius: 20px;
+    background: rgba(39,12,57,.75);
+    border: 1px solid rgba(199,125,255,.15);
+}
+
+.icone {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.momento h3 {
+    margin-bottom: 10px;
+}
+
+.momento p {
+    color: #cbbbd3;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.carta {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.carta h2 {
+    font-size: clamp(35px, 8vw, 55px);
+    margin: 15px 0 30px;
+}
+
+.texto-carta {
+    text-align: left;
+    color: #ded1e5;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.texto-carta p {
+    margin-bottom: 18px;
+}
+
+.final-card {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.coracoes {
+    font-size: 35px;
+    margin-bottom: 25px;
+    animation: pulsar 2s infinite;
+}
+
+.final-card p {
+    color: #d7c8de;
+    max-width: 450px;
+    margin: 25px auto;
+    line-height: 1.7;
+}
+
+.assinatura {
+    color: #c77dff;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+@media (max-width: 650px) {
+    .momentos-grid {
+        grid-template-columns: 1fr;
+        max-height: 55vh;
+        overflow-y: auto;
+    }
+
+    .card,
+    .carta {
+        padding: 35px 22px;
+    }
+}
