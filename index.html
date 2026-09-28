@@ -10,60 +10,116 @@
 
 <div class="stars"></div>
 
+<!-- MÚSICA -->
+<div class="music-player">
+    <button id="musicBtn" onclick="toggleMusica()">🎵</button>
+
+    <div class="music-info">
+        <strong>homesick</strong>
+        <span>wave to earth</span>
+    </div>
+
+    <div id="youtubePlayer"></div>
+</div>
+
 <main id="inicio" class="tela ativa">
     <div class="card">
         <div class="coracao">💜</div>
+
         <p class="pequeno">um pequeno presente para você</p>
-        <h1>Feliz aniversário,<br><span>Sophia</span>!</h1>
-        <p class="subtitulo">Eu queria te dar alguma coisa diferente.</p>
-        <button onclick="abrirPresente()">Abrir presente ✨</button>
+
+        <h1>
+            Feliz aniversário,<br>
+            <span>Sophia</span>!
+        </h1>
+
+        <p class="subtitulo">
+            Eu queria te dar alguma coisa diferente.
+        </p>
+
+        <button onclick="abrirPresente()">
+            Abrir presente ✨
+        </button>
     </div>
 </main>
 
 <main id="momentos" class="tela">
     <div class="conteudo">
+
         <p class="etapa">01 — alguns momentos</p>
-        <h2>Algumas coisas<br><span>que eu queria guardar.</span></h2>
+
+        <h2>
+            Algumas coisas<br>
+            <span>que eu queria guardar.</span>
+        </h2>
 
         <div class="momentos-grid">
+
             <div class="momento">
                 <div class="icone">💬</div>
                 <h3>Nossas conversas</h3>
-                <p>Todas aquelas conversas aleatórias que acabam se tornando especiais.</p>
+                <p>
+                    Todas aquelas conversas aleatórias
+                    que acabam se tornando especiais.
+                </p>
             </div>
 
             <div class="momento">
                 <div class="icone">🎮</div>
                 <h3>Os momentos bobos</h3>
-                <p>As coisas sem sentido que provavelmente não fariam sentido para mais ninguém.</p>
+                <p>
+                    As coisas sem sentido que provavelmente
+                    não fariam sentido para mais ninguém.
+                </p>
             </div>
 
             <div class="momento">
                 <div class="icone">❤️</div>
                 <h3>Você</h3>
-                <p>E principalmente a pessoa que você é, com todas as suas peculiaridades.</p>
+                <p>
+                    E principalmente a pessoa que você é,
+                    com todas as suas peculiaridades.
+                </p>
             </div>
+
         </div>
 
-        <button onclick="mostrarCarta()">Tem mais uma coisa... →</button>
+        <button onclick="mostrarCarta()">
+            Tem mais uma coisa... →
+        </button>
+
     </div>
 </main>
 
 <main id="carta" class="tela">
+
     <div class="carta">
+
         <p class="etapa">02 — uma mensagem</p>
-        <h2>Para você, Sophia 💜</h2>
+
+        <h2>
+            Para você, Sophia 💜
+        </h2>
 
         <div class="texto-carta">
-            <p>Feliz aniversário!</p>
+
+            <p>Feliz aniversário! 💜</p>
 
             <p>
-                Eu poderia simplesmente ter comprado alguma coisa
-                e te entregado, mas queria fazer algo que tivesse
-                um pouco mais de significado.
+                Eu ia te mandar um presente de verdade...
             </p>
 
-            <p>Então fiz isso aqui.</p>
+            <p>
+                Mas já que tu não quis me passar teu endereço 🙄
+                então tive que improvisar e fazer um presente
+                virtual mesmo 🙂‍↕️💜
+            </p>
+
+            <p>
+                Talvez não seja a coisa mais tradicional do mundo,
+                mas eu queria fazer alguma coisa que fosse feita
+                especialmente pra você.
+            </p>
 
             <p>
                 Espero que seu novo ano tenha muitos momentos bons,
@@ -71,30 +127,55 @@
                 você lembrar que a vida também pode ser leve.
             </p>
 
-            <p>Obrigado por todos os momentos que compartilhamos até aqui.</p>
+            <p>
+                Obrigado por todos os momentos que compartilhamos
+                até aqui. ❤️
+            </p>
+
         </div>
 
-        <button onclick="mostrarFinal()">Continuar ❤️</button>
+        <button onclick="mostrarFinal()">
+            Continuar ❤️
+        </button>
+
     </div>
+
 </main>
 
 <main id="final" class="tela">
-    <div class="final-card">
-        <div class="coracoes">💜 ❤️ 💜</div>
 
-        <h1>Feliz aniversário,<br><span>Sophia.</span></h1>
+    <div class="final-card">
+
+        <div class="coracoes">
+            💜 ❤️ 💜
+        </div>
+
+        <h1>
+            Feliz aniversário,<br>
+            <span>Sophia.</span>
+        </h1>
 
         <p>
             Que esse seja apenas o começo
             de um ano incrível para você.
         </p>
 
-        <div class="assinatura">— Henrique</div>
+        <div class="assinatura">
+            — Henrique
+        </div>
 
-        <button onclick="reiniciar()">Voltar ao começo ↻</button>
+        <button onclick="reiniciar()">
+            Voltar ao começo ↻
+        </button>
+
     </div>
+
 </main>
 
 <script src="script.js"></script>
+
+<!-- API DO YOUTUBE -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
 </body>
 </html>
