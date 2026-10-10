@@ -486,3 +486,13 @@ button:hover {
         padding: 35px 22px;
     }
 }
+
+
+.momento-botao { cursor: pointer; transition: .25s ease; }
+.momento-botao:hover { transform: translateY(-5px); border-color: #c77dff; }
+.momento-botao span { display: inline-block; margin-top: 15px; color: #c77dff; font-size: 13px; }
+.galeria-card { width: min(95%, 850px); }
+.fotos-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 25px 0; max-height: 48vh; overflow-y: auto; }
+.fotos-grid img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 15px; border: 1px solid #7b2cbf; }
+.foto-vazia { color: #d8c9df; padding: 20px; }
+@media (max-width: 500px) { .fotos-grid { grid-template-columns: 1fr; } }
