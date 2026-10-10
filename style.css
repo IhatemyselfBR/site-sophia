@@ -496,3 +496,37 @@ button:hover {
 .fotos-grid img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 15px; border: 1px solid #7b2cbf; }
 .foto-vazia { color: #d8c9df; padding: 20px; }
 @media (max-width: 500px) { .fotos-grid { grid-template-columns: 1fr; } }
+
+
+/* Card de momentos bobos: destaque interativo */
+.momento-botao {
+    cursor: pointer;
+    border: 1px solid #c77dff !important;
+    box-shadow: 0 0 18px rgba(157, 78, 221, .25);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.momento-botao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 28px rgba(199, 125, 255, .55);
+}
+.ver-fotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 15px;
+    border: 1px solid #d9a3ff;
+    background: linear-gradient(135deg, #9d4edd, #6a1b9a);
+    color: white;
+    border-radius: 14px;
+    font-size: 14px;
+    box-shadow: 0 0 18px rgba(157, 78, 221, .3);
+}
+.ver-fotos span {
+    font-size: 20px;
+}
+.ver-fotos:hover {
+    background: linear-gradient(135deg, #b56aff, #7b2cbf);
+}
