@@ -74,6 +74,11 @@
                 <button class="ver-fotos" onclick="event.stopPropagation(); abrirGaleria()">
                     📸 Ver nossas fotos <span>→</span>
                 </button>
+                <button id="botao-besteiras"
+                    onclick="event.stopPropagation(); document.getElementById('janela-besteiras').style.display='flex'"
+                    style="display:block;width:100%;margin-top:12px;padding:13px;border:1px solid #d9a3ff;border-radius:14px;background:#32104f;color:#fff;font-size:15px;cursor:pointer;">
+                    besteiras 🫪
+                </button>
             </div>
 
             <div class="momento">
@@ -190,6 +195,25 @@
 
 <!-- API DO YOUTUBE -->
 <script src="https://www.youtube.com/iframe_api"></script>
+
+
+<div id="janela-besteiras"
+    style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(15,5,25,.96);padding:18px;overflow-y:auto;align-items:center;justify-content:center;">
+    <div style="width:100%;max-width:650px;margin:auto;background:#24102f;border:1px solid #9d4edd;border-radius:20px;padding:20px;color:white;text-align:center;">
+        <h2 style="color:#e0b5ff;">besteiras 🫪</h2>
+        <p>Nossas lembranças 💜</p>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
+            <img src="fotos/foto1.jpg" alt="Foto 1" style="width:100%;border-radius:12px;">
+            <img src="fotos/foto2.jpg" alt="Foto 2" style="width:100%;border-radius:12px;">
+            <img src="fotos/foto3.jpg" alt="Foto 3" style="width:100%;border-radius:12px;">
+            <img src="fotos/foto4.jpg" alt="Foto 4" style="width:100%;border-radius:12px;">
+        </div>
+        <button onclick="document.getElementById('janela-besteiras').style.display='none'"
+            style="margin-top:18px;padding:12px 22px;border:0;border-radius:12px;background:#9d4edd;color:white;font-size:15px;cursor:pointer;">
+            Voltar 💜
+        </button>
+    </div>
+</div>
 
 </body>
 </html>
