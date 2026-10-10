@@ -71,6 +71,9 @@
                     As coisas sem sentido que provavelmente
                     não fariam sentido para mais ninguém.
                 </p>
+                <button class="ver-fotos" onclick="abrirGaleria()">
+                    📸 Ver nossas fotos <span>→</span>
+                </button>
             </div>
 
             <div class="momento">
@@ -171,7 +174,22 @@
     </div>
 
 </main>
-<script src="script.js"></script>
+
+<main id="galeria" class="tela">
+    <div class="carta galeria-card">
+        <p class="etapa">03 — lembranças</p>
+        <h2>Nossos momentos <span>bobos 💜</span></h2>
+        <p class="subtitulo">Algumas lembranças que merecem ficar guardadas.</p>
+        <div id="fotos-grid" class="fotos-grid">
+            <img src="fotos/foto1.jpg" alt="Lembrança 1">
+            <img src="fotos/foto2.jpg" alt="Lembrança 2">
+            <img src="fotos/foto3.jpg" alt="Lembrança 3">
+            <img src="fotos/foto4.jpg" alt="Lembrança 4">
+        </div>
+        <button onclick="fecharGaleria()">Voltar aos momentos ↩</button>
+    </div>
+</main>
+\n<script src="script.js"></script>
 
 <!-- API DO YOUTUBE -->
 <script src="https://www.youtube.com/iframe_api"></script>
