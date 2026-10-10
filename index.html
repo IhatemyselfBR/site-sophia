@@ -71,14 +71,6 @@
                     As coisas sem sentido que provavelmente
                     não fariam sentido para mais ninguém.
                 </p>
-                <button class="ver-fotos" onclick="event.stopPropagation(); abrirGaleria()">
-                    📸 Ver nossas fotos <span>→</span>
-                </button>
-                <button id="botao-besteiras"
-                    onclick="event.stopPropagation(); document.getElementById('janela-besteiras').style.display='flex'"
-                    style="display:block;width:100%;margin-top:12px;padding:13px;border:1px solid #d9a3ff;border-radius:14px;background:#32104f;color:#fff;font-size:15px;cursor:pointer;">
-                    besteiras 🫪
-                </button>
             </div>
 
             <div class="momento">
@@ -179,18 +171,6 @@
     </div>
 
 </main>
-
-
-<main id="galeria" class="tela">
-    <div class="carta galeria-card">
-        <p class="etapa">03 — lembranças</p>
-        <h2>Nossos momentos <span>bobos 💜</span></h2>
-        <p class="subtitulo">Algumas lembranças que merecem ficar guardadas.</p>
-        <div id="fotos-grid" class="fotos-grid"></div>
-        <button onclick="fecharGaleria()">Voltar aos momentos ↩</button>
-    </div>
-</main>
-
 <script src="script.js"></script>
 
 <!-- API DO YOUTUBE -->
@@ -214,30 +194,5 @@
         </button>
     </div>
 </div>
-
-
-<!-- EASTER EGG OLHOS -->
-<button id="easter-olhos" onclick="document.getElementById('fotos-secretas').style.display='flex'"
-style="position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:9990;background:transparent;border:0;font-size:28px;cursor:pointer;padding:8px;opacity:.8;">
-👀
-</button>
-
-<div id="fotos-secretas" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(20,5,30,.97);padding:16px;overflow-y:auto;align-items:center;justify-content:center;">
-  <div style="width:100%;max-width:600px;margin:auto;text-align:center;color:white;background:#24102f;border:1px solid #9d4edd;border-radius:20px;padding:18px;">
-    <h2 style="color:#e0b5ff;">As nossas besteiras 🫪</h2>
-    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
-      <img src="fotos/foto1.jpg" alt="Lembrança 1" style="width:100%;border-radius:12px;">
-      <img src="fotos/foto2.jpg" alt="Lembrança 2" style="width:100%;border-radius:12px;">
-      <img src="fotos/foto3.jpg" alt="Lembrança 3" style="width:100%;border-radius:12px;">
-      <img src="fotos/foto4.jpg" alt="Lembrança 4" style="width:100%;border-radius:12px;">
-    </div>
-    <button onclick="document.getElementById('fotos-secretas').style.display='none'"
-    style="margin-top:18px;padding:12px 24px;border:0;border-radius:12px;background:#9d4edd;color:white;font-size:15px;">
-      Fechar 💜
-    </button>
-  </div>
-</div>
-<!-- FIM EASTER EGG -->
-
 </body>
 </html>
