@@ -215,5 +215,29 @@
     </div>
 </div>
 
+
+<!-- EASTER EGG OLHOS -->
+<button id="easter-olhos" onclick="document.getElementById('fotos-secretas').style.display='flex'"
+style="position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:9990;background:transparent;border:0;font-size:28px;cursor:pointer;padding:8px;opacity:.8;">
+👀
+</button>
+
+<div id="fotos-secretas" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(20,5,30,.97);padding:16px;overflow-y:auto;align-items:center;justify-content:center;">
+  <div style="width:100%;max-width:600px;margin:auto;text-align:center;color:white;background:#24102f;border:1px solid #9d4edd;border-radius:20px;padding:18px;">
+    <h2 style="color:#e0b5ff;">As nossas besteiras 🫪</h2>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
+      <img src="fotos/foto1.jpg" alt="Lembrança 1" style="width:100%;border-radius:12px;">
+      <img src="fotos/foto2.jpg" alt="Lembrança 2" style="width:100%;border-radius:12px;">
+      <img src="fotos/foto3.jpg" alt="Lembrança 3" style="width:100%;border-radius:12px;">
+      <img src="fotos/foto4.jpg" alt="Lembrança 4" style="width:100%;border-radius:12px;">
+    </div>
+    <button onclick="document.getElementById('fotos-secretas').style.display='none'"
+    style="margin-top:18px;padding:12px 24px;border:0;border-radius:12px;background:#9d4edd;color:white;font-size:15px;">
+      Fechar 💜
+    </button>
+  </div>
+</div>
+<!-- FIM EASTER EGG -->
+
 </body>
 </html>
