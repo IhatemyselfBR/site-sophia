@@ -190,23 +190,41 @@ function criarCoracoes() {
 
 
 function abrirGaleria() {
-    trocarTela("momentos", "galeria");
+    const momentos = document.getElementById("momentos");
+    const galeria = document.getElementById("galeria");
     const grid = document.getElementById("fotos-grid");
-    if (grid.dataset.carregada) return;
-    grid.dataset.carregada = "sim";
-    const fotos = ['fotos/foto1.jpg', 'fotos/foto2.jpg', 'fotos/foto3.jpg', 'fotos/foto4.jpg'];
-    if (!fotos.length) {
-        grid.innerHTML = '<p class="foto-vazia">Ainda não encontrei fotos na pasta fotos/. Coloca as imagens lá e publica novamente.</p>';
+
+    if (!momentos || !galeria || !grid) {
+        alert("Não consegui encontrar a tela da galeria. Atualize a página e tente novamente.");
         return;
     }
+
+    momentos.classList.remove("ativa");
+    galeria.classList.add("ativa");
+
+    if (grid.dataset.carregada) return;
+    grid.dataset.carregada = "sim";
+
+    const fotos = [
+        "fotos/foto1.jpg",
+        "fotos/foto2.jpg",
+        "fotos/foto3.jpg",
+        "fotos/foto4.jpg"
+    ];
+
     fotos.forEach((src, i) => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = "Lembrança " + (i + 1);
         img.loading = "lazy";
+        img.onerror = () => {
+            img.alt = "Não foi possível carregar " + src;
+            img.style.display = "none";
+        };
         grid.appendChild(img);
     });
 }
+
 function fecharGaleria() {
     trocarTela("galeria", "momentos");
 }
