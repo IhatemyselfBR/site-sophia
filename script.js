@@ -1,64 +1,56 @@
 let player;
 let musicaTocando = false;
+let pediuMusica = false;
 
 /* YOUTUBE */
 
 function onYouTubeIframeAPIReady() {
-
     player = new YT.Player("youtubePlayer", {
-
         videoId: "RxiTWxP9Xf4",
-
         playerVars: {
-            autoplay: 1,
+            autoplay: 0,
             controls: 0,
             loop: 1,
             playlist: "RxiTWxP9Xf4",
             playsinline: 1
         },
-
         events: {
-            onReady: function (event) {
+            onReady: function () {
                 console.log("Música pronta.");
-                event.target.playVideo();
-                musicaTocando = true;
-                document.getElementById("musicBtn").innerHTML = "⏸️";
+                if (pediuMusica) player.playVideo();
+            },
+            onStateChange: function (event) {
+                if (event.data === YT.PlayerState.PLAYING) {
+                    musicaTocando = true;
+                    document.getElementById("musicBtn").innerHTML = "⏸️";
+                } else if (
+                    event.data === YT.PlayerState.PAUSED ||
+                    event.data === YT.PlayerState.ENDED
+                ) {
+                    musicaTocando = false;
+                    document.getElementById("musicBtn").innerHTML = "🎵";
+                }
             }
         }
     });
 }
 
-function toggleMusica() {
-
-    if (!player) return;
-
-    if (!musicaTocando) {
-
+function iniciarMusica() {
+    pediuMusica = true;
+    if (player && typeof player.playVideo === "function") {
         player.playVideo();
-
-        musicaTocando = true;
-
-        document.getElementById("musicBtn").innerHTML = "⏸️";
-
-    } else {
-
-        player.pauseVideo();
-
-        musicaTocando = false;
-
-        document.getElementById("musicBtn").innerHTML = "🎵";
     }
 }
 
+function toggleMusica() {
+    if (!player) return;
 
-/* INICIA A MÚSICA NO PRIMEIRO TOQUE */
-document.addEventListener("pointerdown", function iniciarMusicaUmaVez() {
-    if (!player || musicaTocando) return;
-
-    player.playVideo();
-    musicaTocando = true;
-    document.getElementById("musicBtn").innerHTML = "⏸️";
-}, { once: true });
+    if (musicaTocando) {
+        player.pauseVideo();
+    } else {
+        iniciarMusica();
+    }
+}
 
 /* TELAS */
 
@@ -82,11 +74,7 @@ function trocarTela(atual, proxima) {
 
 function abrirPresente() {
 
-    if (player && !musicaTocando) {
-        player.playVideo();
-        musicaTocando = true;
-        document.getElementById("musicBtn").innerHTML = "⏸️";
-    }
+    iniciarMusica();
 
     criarCoracoes();
 
