@@ -577,3 +577,22 @@ button:hover {
     box-sizing: border-box;
 }
 
+
+/* Vídeo menor na tela final */
+#final .video-aniversario {
+    width: 100%;
+    max-width: 280px;
+    margin: 16px auto;
+}
+
+#final .video-aniversario video {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+#final .video-aniversario p {
+    margin: 8px auto;
+}
+
