@@ -82,6 +82,12 @@ function trocarTela(atual, proxima) {
 
 function abrirPresente() {
 
+    if (player && !musicaTocando) {
+        player.playVideo();
+        musicaTocando = true;
+        document.getElementById("musicBtn").innerHTML = "⏸️";
+    }
+
     criarCoracoes();
 
     trocarTela(
