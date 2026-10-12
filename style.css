@@ -563,3 +563,17 @@ button:hover {
     font-size: 2.5rem;
     margin-top: 8px;
 }
+
+/* Corrige a rolagem da tela final no celular */
+.tela#final {
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+#final .final-card {
+    width: 100%;
+    margin: auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
