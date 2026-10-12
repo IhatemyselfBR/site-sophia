@@ -530,3 +530,24 @@ button:hover {
 .ver-fotos:hover {
     background: linear-gradient(135deg, #b56aff, #7b2cbf);
 }
+
+
+/* Vídeo especial no final */
+.video-aniversario {
+    width: 100%;
+    max-width: 480px;
+    margin: 24px auto;
+}
+
+.video-aniversario p {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.video-aniversario video {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    border-radius: 16px;
+    background: #160d20;
+}
