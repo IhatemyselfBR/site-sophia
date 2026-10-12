@@ -51,6 +51,15 @@ function toggleMusica() {
 }
 
 
+/* INICIA A MÚSICA NO PRIMEIRO TOQUE */
+document.addEventListener("pointerdown", function iniciarMusicaUmaVez() {
+    if (!player || musicaTocando) return;
+
+    player.playVideo();
+    musicaTocando = true;
+    document.getElementById("musicBtn").innerHTML = "⏸️";
+}, { once: true });
+
 /* TELAS */
 
 function trocarTela(atual, proxima) {
