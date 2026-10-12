@@ -551,3 +551,15 @@ button:hover {
     border-radius: 16px;
     background: #160d20;
 }
+
+
+.presente-secreto {
+    margin: 28px auto 20px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.presente-secreto .codigo-presente {
+    font-size: 2.5rem;
+    margin-top: 8px;
+}
