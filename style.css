@@ -596,3 +596,16 @@ button:hover {
     margin: 8px auto;
 }
 
+
+#final .video-aniversario {
+    width: 220px !important;
+    max-width: 220px !important;
+}
+
+#final .video-aniversario video {
+    display: block;
+    width: 220px !important;
+    height: 150px !important;
+    max-height: 150px !important;
+    object-fit: contain !important;
+}
