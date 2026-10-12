@@ -10,7 +10,7 @@ function onYouTubeIframeAPIReady() {
         videoId: "RxiTWxP9Xf4",
 
         playerVars: {
-            autoplay: 0,
+            autoplay: 1,
             controls: 0,
             loop: 1,
             playlist: "RxiTWxP9Xf4",
@@ -18,8 +18,11 @@ function onYouTubeIframeAPIReady() {
         },
 
         events: {
-            onReady: function () {
+            onReady: function (event) {
                 console.log("Música pronta.");
+                event.target.playVideo();
+                musicaTocando = true;
+                document.getElementById("musicBtn").innerHTML = "⏸️";
             }
         }
     });
